@@ -26,14 +26,14 @@ getgenv().options={
         Enabled=true,
         ShowServer=true
     },
-    BeeSwarm=true,
-    Require=true,
-    AntiKick=true,
-    BasicAntiCheatBypass=true,
-    MemoryDetections=true,
-    GUIDetection=true,
-    GroupBypass=true,
-    ClearTrace=true,
+    BeeSwarm=false,
+    Require=false,
+    AntiKick=false,
+    BasicAntiCheatBypass=false,
+    MemoryDetections=false,
+    GUIDetection=false,
+    GroupBypass=false,
+    ClearTrace=false,
     Output=warn --Change to your prefered output option (print,warn,printconsole,rconsoleprint,rconsolewarn,etc)
 }
 getgenv().Guardian={
