@@ -1,0 +1,12 @@
+while true do wait()
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer({
+        ["Type"] = "End",
+        ["Npc"] = workspace.Npcs.Mita,
+        ["Path"] = "Accept"
+    })
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer({
+        ["Type"] = "End",
+        ["Npc"] = workspace.Npcs:FindFirstChild("Saru Kenshi"),
+        ["Path"] = "SetSpawn"
+    })
+end
