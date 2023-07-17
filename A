@@ -1,0 +1,67 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if not isfile("PlatiniumHub_Key.txt") then
+    writefile("PlatiniumHub_Key.txt","gT7aO7rW4nZ3kJ8yS5rG5nP4")
+end
+
+
+local replacements = {
+    ["https://raw.githubusercontent.com/32782GE82GE82G/Loader/main/Loader.txt"] = "https://raw.githubusercontent.com/hackingatpanzer/platbreaker/main/randomnameloader",
+    ["https://raw.githubusercontent.com/32782GE82GE82G/File/main/AFSPlat"] = "https://raw.githubusercontent.com/hackingatpanzer/platbreaker/main/afsplatrandomname",
+    ["https://raw.githubusercontent.com/ZaRdoOx/PlatiniumLib/main/MainGui"] = "https://raw.githubusercontent.com/hackingatpanzer/platbreaker/main/platlib",
+}
+
+local httpGet
+httpGet = hookfunction(game.HttpGet, function(self, url, ...)
+    for original, replacement in pairs(replacements) do
+        if url:find(original) then
+            warn("the nuking has arrived")
+            return httpGet(game.HttpGet, replacement, ...)
+        end
+    end
+    return httpGet(self, url, ...)
+end)
+
+
+
+
+wait(1.5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/platbreaker/main/firstoneloader", true))()
+wait(0.5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/platbreaker/main/randomnameloader", true))()
+wait(0.5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/platbreaker/main/afsplatrandomname", true))()
+wait(0.5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/platbreaker/main/platlib", true))()
