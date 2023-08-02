@@ -33,7 +33,7 @@
 
 
 if not isfile("PlatiniumHub_Key.txt") then
-    writefile("PlatiniumHub_Key.txt","gT7aO7rW4nZ3kJ8yS5rG5nP4")
+    writefile("PlatiniumHub_Key.txt","dX8iV4sZ0zK9eR0u")
 end
 
 
