@@ -26,6 +26,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("SetTutorialDone"):FireServer(unpack(args))
             TextField:SetText("Started")
     end
+end
 })
 
 local D = Y.Dropdown({
