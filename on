@@ -1,0 +1,23 @@
+game.CoreGui.ChildAdded:Connect(function(v)
+if v.Name == "Key" then
+	repeat wait() until game:GetService("CoreGui").Key
+repeat wait() until game:GetService("CoreGui").Key.Main
+repeat wait() until game:GetService("CoreGui").Key.Main.Input
+repeat wait() until game:GetService("CoreGui").Key.Main.Input.InputBox
+repeat wait() until game:GetService("CoreGui").Key.Main.NoteMessage
+repeat wait() until game:GetService("CoreGui").Key.Main.Input.HidenInput
+print("ka")
+
+game:GetService("CoreGui").Key.Main.Input.InputBox.Text = "BigMalUpdates"
+game:GetService("CoreGui").Key.Main.Input.HidenInput.Text = "BigMalUpdates"
+game:GetService("CoreGui").Key.Main.NoteMessage.Text = "Dear stupid nega, click the key box then press enter"
+end
+end)
+
+
+
+
+
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f4bd527c2e4f381e81375650417dab58.lua"))()
+
