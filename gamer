@@ -1,0 +1,3656 @@
+
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Nuke AFS X ( the pasting )", HidePremium = false, SaveConfig = true, IntroEnabled = true, IntroText = "Gamers Hub" , ConfigFolder = "OrionTest"})
+
+plr = game:GetService("Players").LocalPlayer
+
+            X1 = plr.Character:FindFirstChild("HumanoidRootPart").CFrame.X
+            Y1 = plr.Character:FindFirstChild("HumanoidRootPart").CFrame.Y
+            Z1 = plr.Character:FindFirstChild("HumanoidRootPart").CFrame.Z
+            wait(0.5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1192.6337890625, 14.408954620361328, -126.598388671875)
+            task.wait()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1030.98681640625, 174.62156677246094, -1715.4210205078125)
+            task.wait()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(639.5204467773438, 17.245742797851562, -1971.4776611328125)
+            task.wait()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1140.9661865234375, 14.682706832885742, -354.6196594238281)
+            task.wait()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1038.8843994140625, 14.687472343444824, 1000.0218505859375)
+            
+            wait(.01)
+            plr.Character.HumanoidRootPart.CFrame = CFrame.new(X1,Y1+5,Z1)
+
+
+
+
+--Values
+    getgenv().bBoss = false;
+    getgenv().aBoss = "_ape";
+    getgenv().autoStren = false; 
+    getgenv().autoDurab = false;
+    getgenv().autoChakr = false;
+    getgenv().autoSpeed = false;
+    getgenv().autoSword = false;
+    getgenv().autoChest1 = false;
+    getgenv().autoChest2 = false;
+    getgenv().autoChest3 = false;
+    getgenv().autoChest4 = false;
+    getgenv().autoChamp = false;
+    getgenv().autoQuirk = false;
+    getgenv().autoStand = false;
+    getgenv().claimDaily = false;
+    getgenv().autoUpgradeStr = false;
+    getgenv().autoUpgradeDur = false;
+    getgenv().autoUpgradeSwrd = false;
+    getgenv().autoUpgradeChk = false;
+    getgenv().autoUpgradeSpeed = false;
+    getgenv().autosp33d = false;
+    getgenv().autobreathstyle = false;
+    getgenv().autoQuest1T = false;
+    getgenv().autoQuest2C = false;
+    getgenv().autoQuest3N = false;
+    getgenv().autoQuest4S = false;
+    getgenv().autoQuest5S = false;
+    getgenv().autoQuest6p = false;
+    getgenv().autoQuest7N = false;
+    getgenv().autoQuest8N = false;
+    getgenv().autoQuest9N = false;
+    getgenv().autoQuest10N = false;
+    getgenv().autoQuest11N = false;
+    getgenv().autoQuest12N = false;
+    getgenv().autoQuest13N = false;
+    getgenv().autoQuest14N = false;
+    getgenv().autoQuest15N = false;
+    getgenv().autoQuest16N = false;
+    getgenv().autoQuest17N = false;
+    getgenv().autoQuest18N = false;
+    getgenv().autoQuest19N = false;
+    getgenv().autoQuest20N = false;
+    getgenv().autoQuest21N = false;
+    getgenv().autoQuest22N = false;
+    getgenv().getquest1 = false;
+    getgenv().getquest2 = false;
+    getgenv().getquest3 = false;
+    getgenv().getquest4 = false;
+    getgenv().getquest5 = false;
+    getgenv().getquest6 = false;
+    getgenv().getquest7 = false;
+    getgenv().getquest8 = false;
+    getgenv().getquest9 = false;
+    getgenv().getquest10 = false;
+    getgenv().getquest11 = false;
+    getgenv().getquest12 = false;
+    getgenv().getquest13 = false;
+    getgenv().getquest14 = false;
+    getgenv().getquest15 = false;
+    getgenv().getquest16 = false;
+    getgenv().getquest17 = false;
+    getgenv().getquest18 = false;
+    getgenv().getquest19 = false;
+    getgenv().getquest20 = false;
+    getgenv().getquest21 = false;
+    getgenv().getquest22 = false;
+    getgenv().getquest23 = false;
+    getgenv().getquest24 = false;
+    getgenv().getquest25 = false;
+    getgenv().getquest26 = false;
+    getgenv().getquest27 = false;
+    getgenv().farmtype = false;
+--Functions
+                        
+                      
+
+                      local NPCS = {}
+                            for i, v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetDescendants()) do
+                                if v:IsA "Model" and v:FindFirstChild("HumanoidRootPart") then
+                                    if not table.find(NPCS, tostring(v)) then
+                                        table.insert(NPCS, tostring(v))
+                                    end
+                                end
+                            end
+
+                      
+                      
+                      
+                      local BossT = {}
+                  
+                          for i, v in pairs(game:GetService("Workspace").Scriptable.Bosses:GetDescendants()) do
+                              if v:IsA "Model" and v:FindFirstChild("HumanoidRootPart") then
+                                  if not table.find(BossT, tostring(v)) then
+                                  table.insert(BossT, tostring(v))
+                                  end
+                              end
+                          end
+                  
+                               
+                          
+                          
+                          
+                  
+                          local TPDimension = {}
+                  
+                                  for i, v in pairs(game:GetService("Workspace").Scriptable.TrainingsAreas:GetDescendants()) do
+                                      if v:IsA "Part" then
+                                          if not table.find(TPDimension, tostring(v)) then
+                                          table.insert(TPDimension, tostring(v))
+                                           end
+                                      end
+                                  end
+
+
+                                  local QuestNPCS = {}
+                  
+                                  for i, v in pairs(workspace.Scriptable.NPC.Quests:GetDescendants()) do
+                                      if v:IsA "Model" then
+                                          if not table.find(QuestNPCS, tostring(v)) then
+                                          table.insert(QuestNPCS, tostring(v))
+                                           end
+                                      end
+                                  end
+                  
+                       
+                      local function getNPCCC()
+                  
+                          for i, v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                              if v:IsA "Model" and v.Name == amobs then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame + Vector3.new(0, dista, 0)
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.lookAt(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, v.Head.Position)
+                  
+                                  end
+                      
+                          end
+                      
+                      end
+                      
+                      local function DoABoss()                        
+                       
+                        
+                            for i, v in pairs(game:GetService("Workspace").Scriptable.Bosses:GetChildren()) do
+                                if v:IsA "Model" and v.Name == aBoss then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame + Vector3.new(0,dista2,0) 
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.lookAt(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, v.Head.Position)
+                    
+                                end
+                        
+                            end
+                        end
+                        
+                        
+
+                     
+
+
+                      local function BossGet()
+                  
+                          for i, v in pairs(game:GetService("Workspace").Scriptable.Bosses:GetChildren()) do
+                              if v:IsA "Model" and v.Name == bosss then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame + Vector3.new(0,dista2,0) 
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.lookAt(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, v.Head.Position)
+                  
+                              end
+                      
+                          end
+                      
+                      end
+                  
+                  
+                      local function TPdim()
+                  
+                          for i, v in pairs(game:GetService("Workspace").Scriptable.TrainingsAreas:GetChildren()) do
+                              if v:IsA "Part" and v.Name == tpareas then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame + Vector3.new(0,2,0) 
+                  
+                              end
+                      
+                          end
+                      
+                      end
+                  
+                      local function getFRUIT()
+                          
+                          for _,v in pairs(game:GetService("Workspace"):GetChildren()) do
+                              if v:IsA "Model" and v.Name == "chop" or v.Name == "gomu" or v.Name == "mera" or v.Name == "ice" or v.Name == "gura" or v.Name == "magma" or v.Name == "buddha" or v.Name == "light" then
+                              OrionLib:MakeNotification({
+                                Name = "Fruit Found!",
+                                Content = "Teleporting in few secs",
+                                Image = "rbxassetid://4483345998",
+                                Time = 5
+                            }) 
+                            wait(1)
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Mesh.CFrame
+
+                                
+                              end
+                          end
+                      end
+                  
+                  
+                  
+                  local function NPCSQuestss()
+                    for i, v in pairs(workspace.Scriptable.NPC.Quests:GetDescendants()) do
+                        if v:IsA "Model" and v.Name == npcsquest then
+                              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame + Vector3.new(0,2,0) 
+            
+                        end
+                
+                    end
+
+                  end
+                  
+                  
+                  
+                          function AutoStr()
+                              spawn(function()
+                                  while getgenv().autoStren == true do
+                                      local args = {
+                                          [1] = "TrainStat",
+                                          [2] = "Strength"}
+                      
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+                                      wait()    
+                                  end
+                              end)
+                          end
+                      
+                  
+                  
+                          function AutoDur()
+                              spawn(function()
+                                  while getgenv().autoDurab == true do
+                                      local args = {
+                                          [1] = "TrainStat",
+                                          [2] = "Durability"}
+                      
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+                                      wait()    
+                                  end
+                              end)
+                          end
+                      
+                          function AutoChkr()
+                              spawn(function()
+                                  while getgenv().autoChakr == true do
+                                      local args = {
+                                          [1] = "TrainStat",
+                                          [2] = "Chakra"}
+                      
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+                                      wait()    
+                                  end
+                              end)
+                          end
+                      
+                          function AutoSword()
+                              spawn(function()
+                                  while getgenv().autoSword == true do
+                                      local args = {
+                                          [1] = "TrainStat",
+                                          [2] = "Sword"}
+                      
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+                                      wait()    
+                                  end
+                              end)
+                          end
+                      
+                          function AutoSpeed()
+                              spawn(function()
+                                  while getgenv().autoSpeed == true do
+                                      local args = {
+                                          [1] = "TrainStat",
+                                          [2] = "Speed"}
+                      
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+                                      wait()    
+                                  end
+                              end)
+                          end
+                      
+                          function AutoUpgradeStrength()
+                              spawn(function()
+                                   while getgenv().autoUpgradeStr == true do
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer("Upgrade", "Strength")
+                                      wait()
+                                  end
+                              end)
+                          end
+                          
+                          function AutoUpgradeDurab()
+                              spawn(function()
+                                   while getgenv().autoUpgradeDur == true do
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer("Upgrade", "Durability")
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function AutoUpgradeChakra()
+                              spawn(function()
+                                   while getgenv().autoUpgradeChk == true do
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer("Upgrade", "Chakra")
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function AutoUpgradeSword()
+                              spawn(function()
+                                   while getgenv().autoUpgradeSwrd == true do
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer("Upgrade", "Sword")
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function AutoUpgradeSped()
+                              spawn(function()
+                                   while getgenv().autoUpgradeSpeed == true do
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer("Upgrade", "Speed")
+                                      wait()
+                                  end
+                              end)
+                          end
+                         
+                  
+                          function AutoCollectDailyBonus()
+                              wait()
+                                      local args = {
+                                          [1] = "ClaimDailyQuestBonus",
+                                          [2] = "Bonus_1"
+                                      }
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                                      wait()
+                                      local args = {
+                                          [1] = "ClaimDailyQuestBonus",
+                                          [2] = "Bonus_2"
+                                      }
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                                      wait()
+                                      local args = {
+                                          [1] = "ClaimDailyQuestBonus",
+                                          [2] = "Bonus_3"
+                                      }
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                                      wait()
+                                      local args = {
+                                          [1] = "ClaimDailyQuestBonus",
+                                          [2] = "Bonus_4"
+                                      }
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                                      wait()
+                  
+                          end
+                          function AutoCollectDaily()
+                              wait()
+                              local args = {
+                                  [1] = "ClaimDailyQuest",
+                                  [2] = "daily_quest1"
+                              }
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                              wait()
+                              local args = {
+                                  [1] = "ClaimDailyQuest",
+                                  [2] = "daily_quest2"
+                              }
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                              wait()
+                              local args = {
+                                  [1] = "ClaimDailyQuest",
+                                  [2] = "daily_quest3"
+                              }
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                              wait()
+                              local args = {
+                                  [1] = "ClaimDailyQuest",
+                                  [2] = "daily_quest4"
+                              }
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                              wait()
+                  
+                          end
+                  
+                          function GetBoomQuest()
+                              spawn(function()
+                                  while getgenv().getquest1 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "FirstQuest") 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetZoruQuest()
+                              spawn(function()
+                                  while getgenv().getquest2 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "Zoru") 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetVillainQuest()
+                              spawn(function()
+                                  while getgenv().getquest3 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "villain") 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetPlayerKill1Quest()
+                              spawn(function()
+                                  while getgenv().getquest4 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "PlayerKillQuest1") 
+                                      wait()
+                                  end
+                              end)
+                          end
+                      
+                          function GetPlayerKill2Quest()
+                              spawn(function()
+                                  while getgenv().getquest5 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "PlayerKillQuest2") 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest1A()
+                              spawn(function()
+                                  while getgenv().getquest6 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest", 1) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest1B()
+                              spawn(function()
+                                  while getgenv().getquest7 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest", 2) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest1C()
+                              spawn(function()
+                                  while getgenv().getquest8 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest", 3) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                  
+                          function GetBanditQuest2A()
+                              spawn(function()
+                                  while getgenv().getquest9 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest2", 1) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest2B()
+                              spawn(function()
+                                  while getgenv().getquest10 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest2", 2) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest3A()
+                              spawn(function()
+                                  while getgenv().getquest11 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest3", 1) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest3B()
+                              spawn(function()
+                                  while getgenv().getquest12 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest3", 2) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest3C()
+                              spawn(function()
+                                  while getgenv().getquest13 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest3", 3) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                  
+                          function GetBanditQuest4A()
+                              spawn(function()
+                                  while getgenv().getquest14 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest4", 1) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                  
+                          function GetBanditQuest4B()
+                              spawn(function()
+                                  while getgenv().getquest15 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest4", 2) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                  
+                          function GetBanditQuest4C()
+                              spawn(function()
+                                  while getgenv().getquest16 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest4", 3) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                  
+                          function GetBanditQuest5A()
+                              spawn(function()
+                                  while getgenv().getquest17 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest5", 1) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest5B()
+                              spawn(function()
+                                  while getgenv().getquest18 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest5", 2) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest5C()
+                              spawn(function()
+                                  while getgenv().getquest19 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest5", 3) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                  
+                          function GetBanditQuest6A()
+                              spawn(function()
+                                  while getgenv().getquest20 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest6", 1) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                  
+                          function GetBanditQuest6B()
+                              spawn(function()
+                                  while getgenv().getquest21 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest6", 2) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                  
+                  
+                          function GetBanditQuest7A()
+                              spawn(function()
+                                  while getgenv().getquest22 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest7", 1) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest7B()
+                              spawn(function()
+                                  while getgenv().getquest23 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest7", 2) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest7C()
+                              spawn(function()
+                                  while getgenv().getquest24 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest7", 3) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                  
+                          function GetBanditQuest8A()
+                              spawn(function()
+                                  while getgenv().getquest25 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest8", 1) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest8B()
+                              spawn(function()
+                                  while getgenv().getquest26 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest8", 2) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                          function GetBanditQuest8C()
+                              spawn(function()
+                                  while getgenv().getquest27 == true do
+                  
+                                      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer("StartQuest", "BanditQuest8", 3) 
+                                      wait()
+                                  end
+                              end)
+                          end
+                  
+                  
+                  
+                  function AUTO1Quest()
+                  
+                          local lp = game.Players.LocalPlayer
+                  
+                          local function getNPC()
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "Thug1" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                              wait(0.1)
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "Thug2" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                          while getgenv().autoQuest1T == true do 
+                          task.wait()
+                              pcall(function()
+                                  moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                  wait(0.1)
+                              end)
+                              if game:GetService("Workspace").Scriptable.Mobs.Thug1.Head or game:GetService("Workspace").Scriptable.Mobs.Thug2.Head then
+                  
+                              loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                              end
+                              local args = {
+                              [1] = "StartQuest",
+                              [2] = "BanditQuest",
+                              [3] = 1
+                              }
+                  
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      end
+                  
+                      function AUTO2Quest()
+                  
+                              local lp = game.Players.LocalPlayer
+                                              
+                                  local function getNPC()
+                  
+                                  for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                      if v.Name == "cyclop" then
+                                          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                          
+                                          
+                                      end     
+                                  end
+                              end
+                  
+                              while getgenv().autoQuest2C == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                                  end)
+                                  if game:GetService("Workspace").Scriptable.Mobs.cyclop.Head then
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  end
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest",
+                                  [3] = 2
+                                  }
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                          
+                      end
+                  
+                      function AUTO3Quest()
+                  
+                              local lp = game.Players.LocalPlayer
+                                              
+                                  local function getNPC()
+                                  for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                      if v:IsA "Model" and v.Name == "nomu" then
+                                      
+                                          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      end     
+                                  end
+                              end
+                  
+                              
+                           while getgenv().autoQuest3N == true do
+                                   task.wait()
+                                    pcall(function() 
+                                          moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(0,3,0) ,100)
+                                          wait(0.1)
+                                    
+                                  end)
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                  
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest",
+                                  [3] = 3
+                                  }
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                                  
+                                  
+                                 
+                              end
+                  
+                           
+                      end
+                  
+                      function AUTO4Quest2()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "sandChunin1" or v.Name == "sandChunin2" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                          while getgenv().autoQuest4S == true do 
+                          task.wait()
+                              pcall(function()
+                                  moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                  wait()
+                  
+                                  
+                              
+                              end)
+                              if game:GetService("Workspace").Scriptable.Mobs.sandChunin1.Head or game:GetService("Workspace").Scriptable.Mobs.sandChunin2.Head then
+                  
+                              loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                              end
+                              local args = {
+                              [1] = "StartQuest",
+                              [2] = "BanditQuest2",
+                              [3] = 1
+                              }
+                  
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      end
+                  
+                      function AUTO5Quest2()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "sandJonin" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest5S == true do 
+                          task.wait()
+                              pcall(function()
+                  
+                                  moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                  wait()
+                  
+                                  
+                              
+                              end)
+                              if game:GetService("Workspace").Scriptable.Mobs.sandJonin.Head then
+                  
+                              loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                              wait()
+                              end
+                              
+                              local args = {
+                              [1] = "StartQuest",
+                              [2] = "BanditQuest2",
+                              [3] = 2
+                              }
+                  
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                       end
+                      
+                      end    
+                  
+                      function AUTO6Quest3()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "pirate1" or v.Name == "pirate2" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest6p == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                                  if game:GetService("Workspace").Scriptable.Mobs.pirate1.Head or game:GetService("Workspace").Scriptable.Mobs.pirate2.Head then
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  end
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest3",
+                                  [3] = 1
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                  
+                      function AUTO7Quest3()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "brute" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest7N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                  
+                                  if game:GetService("Workspace").Scriptable.Mobs.brute.Head then
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  end
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest3",
+                                  [3] = 2
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                      function AUTO8Quest3()
+                  
+                          local lp = game.Players.LocalPlayer
+                                       
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "yeti" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end            
+                      
+                              end            
+                          end
+                  
+                              
+                  
+                  
+                          while getgenv().autoQuest8N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest3",
+                                  [3] = 3
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                  
+                      function AUTO9Quest4()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "Demon1" or v.Name == "Demon2" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest9N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                                  if game:GetService("Workspace").Scriptable.Mobs.Demon1.Head or game:GetService("Workspace").Scriptable.Mobs.Demon2.Head then
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  end
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest4",
+                                  [3] = 1
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                      function AUTO10Quest4()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "strongDemon" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest10N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                                  if game:GetService("Workspace").Scriptable.Mobs.strongDemon.Head then
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  end
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest4",
+                                  [3] = 2
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                      function AUTO11Quest4()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "arrowDemon" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest11N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  
+                  
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest4",
+                                  [3] = 3
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                  
+                      function AUTO12Quest5()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "evilSaiyan1" or v.Name == "evilSaiyan2" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest12N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                                  if game:GetService("Workspace").Scriptable.Mobs.evilSaiyan1.Head or game:GetService("Workspace").Scriptable.Mobs.evilSaiyan2.Head then
+                   
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  end
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest5",
+                                  [3] = 1
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                      function AUTO13Quest5()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "strongSaiyan" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest13N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                                  if game:GetService("Workspace").Scriptable.Mobs.strongSaiyan.Head then
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  end
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest5",
+                                  [3] = 2
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                      function AUTO14Quest5()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "saiyanCaptain" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest14N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest5",
+                                  [3] = 3
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                  
+                      function AUTO15Quest6()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "freezaTroop1" or v.Name == "freezaTroop2" or v.Name == "freezaTroop3" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest15N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                                  if game:GetService("Workspace").Scriptable.Mobs.freezaTroop1.Head or game:GetService("Workspace").Scriptable.Mobs.freezaTroop2.Head or game:GetService("Workspace").Scriptable.Mobs.freezaTroop3.Head then
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  end
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest6",
+                                  [3] = 1
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                      function AUTO16Quest6()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "jinyuSquad" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest16N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                                  if game:GetService("Workspace").Scriptable.Mobs.jinyuSquad.Head then
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  end
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest6",
+                                  [3] = 2
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                      function AUTO17Quest7()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "yakuza1" or v.Name == "yakuza2" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest17N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                                  if game:GetService("Workspace").Scriptable.Mobs.yakuza1.Head or game:GetService("Workspace").Scriptable.Mobs.yakuza2.Head then
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  end
+                  
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest7",
+                                  [3] = 1
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                      function AUTO18Quest7()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "yakuzacommander1" or v.Name == "yakuzacommander2" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest18N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                                  if game:GetService("Workspace").Scriptable.Mobs.yakuzacommander1.Head or game:GetService("Workspace").Scriptable.Mobs.yakuzacommander2.Head then
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  end
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest7",
+                                  [3] = 2
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                      function AUTO19Quest7()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "stain" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest19N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                  
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  
+                  
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest7",
+                                  [3] = 3
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                      function AUTO20Quest8()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "lowtierdemon" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest20N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                                  if game:GetService("Workspace").Scriptable.Mobs.lowtierdemon.Head then
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  end
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest8",
+                                  [3] = 1
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                  
+                      function AUTO21Quest8()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "spiderdemon" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest21N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                                  if game:GetService("Workspace").Scriptable.Mobs.spiderdemon.Head then
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  end
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest8",
+                                  [3] = 2
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                  
+                      function AUTO22Quest8()
+                  
+                          local lp = game.Players.LocalPlayer
+                                          
+                              local function getNPC()
+                          
+                  
+                              for i,v in pairs(game:GetService("Workspace").Scriptable.Mobs:GetChildren()) do
+                                  if v.Name == "upperrankdemon" then
+                                      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Head.CFrame
+                                      
+                                      
+                                  end     
+                              end
+                          end
+                  
+                  
+                          while getgenv().autoQuest22N == true do 
+                              task.wait()
+                                  pcall(function()
+                  
+                                      moveto(getNPC().HumanoidRootPart.CFrame + Vector3.new(50,100,300) ,100)
+                                      wait()
+                  
+                                      
+                                  
+                                  end)
+                                  loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                                  wait()
+                                  
+                  
+                                  local args = {
+                                  [1] = "StartQuest",
+                                  [2] = "BanditQuest8",
+                                  [3] = 3
+                                  }
+                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+                          end
+                      
+                      end
+                      
+                  ---
+                  
+                      function AutoChest1()
+                              spawn(function()
+                                  while getgenv().autoChest1 == true do
+                                      if game:GetService("Workspace").Scriptable.Crates.common then
+                                      wait()
+                                      local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+                                      rootPart.CFrame = game:GetService("Workspace").Scriptable.Crates.common.WorldPivot
+                                      end
+                                      game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.E,false,game)
+                                  end
+                              end)
+                          end
+                      
+                          function AutoChest2()
+                              spawn(function()
+                                  while getgenv().autoChest2 == true do
+                                      if game:GetService("Workspace").Scriptable.Crates.rare then
+                                      wait()
+                                      local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+                                      rootPart.CFrame = game:GetService("Workspace").Scriptable.Crates.rare.WorldPivot
+                                      end
+                                      game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.E,false,game) 
+                                  end
+                              end)
+                          end
+                  
+                          function AutoChest3()
+                              spawn(function()
+                                  while getgenv().autoChest3 == true do
+                                      if game:GetService("Workspace").Scriptable.Crates.epic then                   
+                                      wait()
+                  
+                                      local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+                                      rootPart.CFrame = game:GetService("Workspace").Scriptable.Crates.epic.WorldPivot
+                                  end                    
+                                  game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.E,false,game) 
+                              end   
+                              end)
+                          end
+                  
+                          function AutoChest4()
+                              spawn(function()
+                                  while getgenv().autoChest4 == true do
+                                      if game:GetService("Workspace").Scriptable.Crates.legendary then
+                                      wait()
+                                      local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+                                      rootPart.CFrame = game:GetService("Workspace").Scriptable.Crates.legendary.WorldPivot
+                                      end
+                                      game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.E,false,game) 
+                                      
+                                  end
+                              end)
+                          end
+                  
+                      function DoAutoChamp()
+                          spawn(function() 
+                              while getgenv().autoChamp == true do
+                                  local args = {
+                                      [1] = "Roll",
+                                      [2] = "Champion Capsule",
+                                      [3] = 1
+                                  }
+                                  
+                                  
+                                  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Champions/RemoteEvent"):FireServer(unpack(args))
+                                  wait(16)
+                  
+                                  game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.E,false,game)
+                                  wait(0.5)
+                              end
+                          end)
+                      end
+                      
+                      function DoAutoQuirk()
+                          local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+                              spawn(function()
+                                  while getgenv().autoQuirk == true do
+                                      rootPart.CFrame = CFrame.new(-768.809448, 67.1714325, 1527.82593, 0.516141891, 6.11732398e-09, 0.856503069, 2.1963551e-09, 1, -8.46576587e-09, -0.856503069, 6.25072172e-09, 0.516141891)
+                                      wait(1)
+                                      game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.E,false,game)
+                                      wait(0.5)
+                                  end
+                          end)
+                      end
+                  
+                      function DoAutoStand()
+                          local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+                              spawn(function()
+                                  while getgenv().autoStand == true do
+                                      rootPart.CFrame = CFrame.new(-288.255615, 14.709693, -41.1757927, 0.0798003227, 8.67170797e-08, 0.996810853, -3.98024191e-09, 1, -8.66758754e-08, -0.996810853, 2.94921487e-09, 0.0798003227)
+                                      wait(1)
+                                      game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.E,false,game)
+                                      wait(0.5)
+                                  end
+                          end)
+                      end   
+                  
+                      
+                      function DoAutoBreathingStyles()
+                          local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+                              spawn(function()
+                                  while getgenv().autobreathstyle == true do
+                                      rootPart.CFrame = CFrame.new(7.66497564, 250.580872, 3738.45117, -0.997404635, -3.03105203e-08, 0.0719995648, -3.39798554e-08, 1, -4.97384463e-08, -0.0719995648, -5.2055892e-08, -0.997404635)
+                                      wait(1)
+                                      game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.E,false,game)
+                                      wait(0.5)
+                                  end
+                          end)
+                      end
+                  
+                  
+                      function AutoClaimDaily()
+                          spawn(function()
+                              while getgenv().claimDaily == true do
+                                  
+                                   game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rewards/RemoteEvent"):FireServer("ClaimDaily")
+                                  wait(10)
+                              end
+                          end)
+                          end
+                  
+                      function AutoRedeemCodes()
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "RELEASE"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "LETSGO100K"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "UPDATE1OUTNOW"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "NICESHUTDOWN"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "AWESOME50KLIKES"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "35KWOW"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "bruh3shutdowns"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "anotherBugFixes"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "bugsFixes"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "OMG20KLIKES"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "sorryForShutdown"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "10KLIKESTHANKYOU"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                     
+                  
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "UPDATE2OUTNOW"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                    
+                  
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "AnotherQuickPatchUpdate"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                     
+                  
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "bugFixwithYenOMG"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                      
+                      
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "125KLIKESOMG"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                      
+                  
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "75KLIKESOMG"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                   
+                      
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "10KLIKESTHANKYOU"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "freefightpassticket"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                      
+                      
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "FIGHTINGPASSISBACK"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                      
+                  
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "QuickShutdown"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                   
+                      
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "150K150K"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "OMGUPDATE3OMG"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "Bandites"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "Subtigretv"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "SubToVanilla"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                          wait()
+                          
+                          local args = {
+                              [1] = "Redeem",
+                              [2] = "SubTowdax"
+                          }
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Codes/RemoteFunction"):InvokeServer(unpack(args))
+                          
+                     
+                     
+                      end
+                  
+                  
+                      function CollectAchieve()
+                      
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_1")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_2")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_3")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_4")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_5")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_6")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_7")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_8")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_9")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_10")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_11")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_12")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_13")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_14")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_15")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_16")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_17")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_18")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_19")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_20")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_21")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_22")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_23")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_24")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","power_25")
+                          wait(1)
+                      end
+                  
+                      function CollectAchieve()
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_1")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_2")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_3")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_4")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_5")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_6")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_7")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_8")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_9")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_10")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_11")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_12")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_13")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_14")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_15")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_16")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_17")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_18")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_19")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","reputation_20")
+                          wait(1)
+                          
+                        
+                      end
+                  
+                      function CollectAchieve()
+                          
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_1")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_2")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_3")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_4")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_5")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_6")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_7")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_8")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_9")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_10")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_11")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_12")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_13")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_14")
+                              wait(1)
+                              
+                              game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","boss_15")
+                              wait(1)    
+                      end
+                  
+                      function CollectAchieve()
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","champion_1")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","champion_2")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","champion_3")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","champion_4")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","champion_5")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","champion_6")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","champion_7")
+                          wait(1)   
+                      end
+                  
+                      function CollectAchieve()
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_1")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_2")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_3")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_4")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_5")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_6")
+                          wait(1)
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_7")
+                          wait(1)   
+                          
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_8")
+                          wait(1) 
+                  
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_9")
+                          wait(1) 
+                  
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_10")
+                          wait(1) 
+                  
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_11")
+                          wait(1) 
+                  
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_12")
+                          wait(1) 
+                  
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_13")
+                          wait(1) 
+                  
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_14")
+                          wait(1) 
+                  
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_15")
+                          wait(1) 
+                  
+                          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Achievements/RemoteEvent"):FireServer("ClaimAchievement","tournament_16")
+                          wait(1) 
+                  
+                      end
+                  
+                      
+                  
+                  
+                  
+                  
+
+
+
+
+
+
+
+--Tabs
+        local Tab1 = Window:MakeTab({
+            Name = "Auto Train",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+        local Tab2 = Window:MakeTab({
+            Name = "Auto Upgrade",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+
+        local Tab3 = Window:MakeTab({
+            Name = "Auto Farm",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+
+        local Tab4 = Window:MakeTab({
+            Name = "Auto Quests",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+
+        local Tab5 = Window:MakeTab({
+            Name = "Auto Mob Farm",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+
+        local Tab6 = Window:MakeTab({
+            Name = "Auto Boss Farm",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+
+
+        local Tab7 = Window:MakeTab({
+            Name = "TP Training Zones",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+
+        local Tab8 = Window:MakeTab({
+            Name = "Teleport NPCS",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+
+        local Tab9 = Window:MakeTab({
+            Name = "Teleport Shops",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+
+        local Tab10 = Window:MakeTab({
+            Name = "Misc",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+
+
+ -- Auto Train Tab
+
+
+
+        local Section1 = Tab1:AddSection({
+            Name = "Auto Train"
+        })
+
+        Tab1:AddLabel("credits: nuke (stealing)")
+
+
+        Tab1:AddLabel("Infinite Stamina in Misc Tab")
+
+
+        Tab1:AddToggle({
+            Name = "Auto Strength",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoStren = Value
+                AutoStr()
+            end    
+        })
+
+        Tab1:AddToggle({
+            Name = "Auto Durability",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoDurab = Value
+        AutoDur()
+            end    
+        })
+
+        Tab1:AddToggle({
+            Name = "Auto Chakra",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoChakr = Value
+                AutoChkr()
+            end    
+        })
+
+        Tab1:AddToggle({
+            Name = "Auto Sword",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoSword = Value
+                AutoSword()
+            end    
+        })
+
+        Tab1:AddToggle({
+            Name = "Auto Speed",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoSpeed = Value
+                AutoSpeed()
+            end    
+        })
+
+ ---  Cls      
+
+
+
+
+
+ --Auto Upgrade Tab
+
+        local Section2 = Tab2:AddSection({
+            Name = "Auto Upgrades Stats"
+        })
+
+        Tab2:AddToggle({
+            Name = "Auto Upgrade Strength",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoUpgradeStr = Value
+                AutoUpgradeStrength()
+            end    
+        })
+
+        Tab2:AddToggle({
+            Name = "Auto Upgrade Durability",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoUpgradeDur = Value
+                AutoUpgradeDurab()
+            end    
+        })
+
+        Tab2:AddToggle({
+            Name = "Auto Upgrade Chakra",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoUpgradeChk = Value
+                AutoUpgradeChakra()
+            end    
+        })
+
+        Tab2:AddToggle({
+            Name = "Auto Upgrade Sword",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoUpgradeSwrd = Value
+                AutoUpgradeSword()
+            end    
+        })
+
+        Tab2:AddToggle({
+            Name = "Auto Upgrade Speed",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoUpgradeSpeed = Value
+                AutoUpgradeSped()
+            end    
+        })
+ ---
+
+
+ --- TABS 3
+
+        Tab3:AddSection({
+            Name = "Auto Farm"
+        })
+
+
+        Tab3:AddSection({
+            Name = "Auto Chest Farm (Wait)"
+        })
+
+        Tab3:AddToggle({
+            Name = "Auto Common Chest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoChest1 = Value
+                AutoChest1()
+            end    
+        })
+
+        Tab3:AddToggle({
+            Name = "Auto Rare Chest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoChest2 = Value
+                AutoChest2()
+            end    
+        })
+
+        Tab3:AddToggle({
+            Name = "Auto Epic Chest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoChest3 = Value
+                AutoChest3()
+            end    
+        })
+
+        Tab3:AddToggle({
+            Name = "Auto Legendary Chest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoChest4 = Value
+                AutoChest4()
+            end    
+        })
+
+        Tab3:AddToggle({
+            Name = "Auto All Chests wait(10)",
+            Default = false,
+            Callback = function(Value)
+                t = Value
+
+            while t do task.wait(10)
+            getgenv().autoChest1 = t
+            AutoChest1()
+
+
+            wait(10)
+            getgenv().autoChest2 = t
+            AutoChest2()
+
+            wait(10)
+            getgenv().autoChest3 = t
+            AutoChest3()
+
+
+            wait(10)
+            getgenv().autoChest4 = t
+            AutoChest4()
+            end
+            end    
+        })
+
+
+        Tab3:AddSection({
+            Name = "Auto Roll Shops Farm"
+        })
+
+        Tab3:AddToggle({
+            Name = "Auto Roll Champions",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoChamp = Value
+                DoAutoChamp()
+            end    
+        })
+
+        Tab3:AddToggle({
+            Name = "Auto Roll Quirks",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoQuirk = Value
+                DoAutoQuirk()
+            end    
+        })
+
+        Tab3:AddToggle({
+            Name = "Auto Roll Stands",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autoStand = Value
+                DoAutoStand()
+            end    
+        })
+
+        Tab3:AddToggle({
+            Name = "Auto Roll Breathing Styles",
+            Default = false,
+            Callback = function(Value)
+                getgenv().autobreathstyle = Value
+                DoAutoBreathingStyles()
+            end    
+        })
+
+
+
+        Tab3:AddSection({
+            Name = "Game Misc.."
+        })
+        
+        Tab3:AddToggle({
+            Name = "Auto Farm Fruits",
+            Default = false,
+            Callback = function(Value)
+                o = Value
+                while o do task.wait()
+                getFRUIT()
+                end
+            end    
+        })
+
+
+        Tab3:AddButton({
+            Name = "Redeem All Codes",
+            Callback = function()
+
+                AutoRedeemCodes()
+
+                end  
+            })
+        
+        Tab3:AddToggle({
+                Name = "Claim All Achievements",
+                Default = false,
+                Callback = function(Value)
+                    t = Value
+                    while t do
+                    CollectAchieve()
+                    end
+                end    
+            })
+            
+        Tab3:AddToggle({
+                Name = "Auto Claim Daily Rewards",
+                Default = false,
+                Callback = function(Value)
+                    getgenv().claimDaily = Value
+                    AutoClaimDaily()
+                end    
+            })
+
+
+        Tab3:AddToggle({
+                Name = "Auto Daily Quest Rewards",
+                Default = false,
+                Callback = function(Value)
+                    t = Value
+                    while t do
+                    ClaimDailyQuest()
+                    end
+                end    
+            })      
+              
+        Tab3:AddToggle({
+                Name = "Auto Daily Quest Rewards Bonus",
+                Default = false,
+                Callback = function(Value)
+                    t = Value
+                    while t do
+                    ClaimDailyQuestBonus()
+                    end
+                end    
+            })
+        
+        
+
+
+ ---
+
+ -- Tab 4
+
+           Tab4:AddSection({
+            Name = "Auto Get Quests"
+        })
+
+
+        Tab4:AddLabel("Main")
+
+        Tab4:AddToggle({
+            Name = "Auto Boom Quest (First Quest)",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest1 = Value
+                GetBoomQuest()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Zoro Quest ",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest2 = Value
+                GetZoruQuest()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Won (Villain) Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest3 = Value
+                GetVillainQuest()
+            end    
+        }) 
+
+
+        Tab4:AddLabel("Get Player Kill Quest")
+
+        
+        Tab4:AddToggle({
+            Name = "Auto Goku(Son) Quest ",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest4 = Value
+                GetPlayerKill1Quest()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Gora Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest5 = Value
+                GetPlayerKill2Quest()
+            end    
+        }) 
+
+        Tab4:AddLabel("Get Mob Npcs Quest")
+        Tab4:AddLabel("Auto Get Inferno (1) Quests")
+
+        Tab4:AddToggle({
+            Name = "Auto Thugs Quest ",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest6 = Value
+                GetBanditQuest1A()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Cyclops Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest7 = Value
+                GetBanditQuest1B()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Nomu Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest8 = Value
+                GetBanditQuest1C()
+            end    
+        }) 
+
+        Tab4:AddLabel("Auto Get Kasuma (2) Quests")
+
+        Tab4:AddToggle({
+            Name = "Auto Sand Chunin Quest ",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest9 = Value
+                GetBanditQuest2A()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Sand Jonin Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest10 = Value
+                GetBanditQuest2B()
+            end    
+        }) 
+
+        Tab4:AddLabel("Auto Get Kizura (3) Quests")
+
+        Tab4:AddToggle({
+            Name = "Auto Pirate Quest ",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest11 = Value
+                GetBanditQuest3A()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Brute Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest12 = Value
+                GetBanditQuest3B()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Yeti Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest13 = Value
+                GetBanditQuest3C()
+            end    
+        }) 
+
+
+
+        Tab4:AddLabel("Auto Get Giya (4) Quests")
+
+        Tab4:AddToggle({
+            Name = "Auto Demons Quest ",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest14 = Value
+                GetBanditQuest4A()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Strong Demons Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest15 = Value
+                GetBanditQuest4B()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Arrow Demons Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest16 = Value
+                GetBanditQuest4C()
+            end    
+        }) 
+
+        Tab4:AddLabel("Auto Get Piccolo (5) Quests")
+
+        Tab4:AddToggle({
+            Name = "Auto Evil Saiyans Quest ",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest17 = Value
+                GetBanditQuest5A()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Strong Saiyans Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest18 = Value
+                GetBanditQuest5B()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Saiyan Captain Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest19 = Value
+                GetBanditQuest5C()
+            end    
+        }) 
+
+        Tab4:AddLabel("Auto Get Trunks (6) Quests")
+
+        Tab4:AddToggle({
+            Name = "Auto Freeza Troops Quest ",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest20 = Value
+                GetBanditQuest6A()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Jinyu Squad Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest21 = Value
+                GetBanditQuest6B()
+            end    
+        }) 
+
+        Tab4:AddLabel("Auto Get Falcon (7) Quests")
+
+        Tab4:AddToggle({
+            Name = "Auto Yakuza Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest22 = Value
+                GetBanditQuest7A()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Yakuza Commander Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest23 = Value
+                GetBanditQuest7B()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Hero Killer (Stain) Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest24 = Value
+                GetBanditQuest7C()
+            end    
+        }) 
+
+        Tab4:AddLabel("Auto Get Uzu (8) Quests")
+
+        Tab4:AddToggle({
+            Name = "Auto Low Tier Demon Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest25 = Value
+                GetBanditQuest8A()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Spider Demon Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest26 = Value
+                GetBanditQuest8B()
+            end    
+        }) 
+
+        Tab4:AddToggle({
+            Name = "Auto Upper Rank Demon Quest",
+            Default = false,
+            Callback = function(Value)
+                getgenv().getquest27 = Value
+                GetBanditQuest8C()
+            end    
+        }) 
+
+
+ ---==---
+
+
+ ---Tab5
+        Tab5:AddLabel("Auto Mobs Farm")
+
+        Tab5:AddDropdown({
+            Name = "Select",
+            Default = "",
+            Options = NPCS ,
+            Callback = function(Value)
+                getgenv().amobs = Value
+                
+            end    
+        })
+
+        Tab5:AddSlider({
+            Name = "Farm Distance",
+            Min = 0,
+            Max = 80,
+            Default = 9,
+            Color = Color3.fromRGB(255,255,255),
+            Increment = 1,
+            ValueName = "Distance",
+            Callback = function(Value)
+                getgenv().dista = Value
+            end    
+        })
+
+
+        
+
+        Tab5:AddToggle({
+            Name = "Start Auto Farm",
+            Default = false,
+            Callback = function(Value)
+                t = Value
+                while t do task.wait()
+                    
+                            pcall(function()
+                                moveto(getNPCCC().HumanoidRootPart.CFrame + Vector3.new(0,0,0) ,100)               
+                                wait()
+                    end)
+                end
+            end    
+        }) 
+
+        Tab5:AddToggle({
+            Name = "Strength Kill Aura",
+            Default = false,
+            Callback = function(Value)
+                t = Value
+                    getgenv().autoStren = t
+                    AutoStr()
+            end    
+        }) 
+
+        Tab5:AddToggle({
+            Name = "Sword Kill Aura",
+            Default = false,
+            Callback = function(Value)
+                t = Value
+                    getgenv().autoSword = t
+                    AutoSword()
+            end    
+        }) 
+        
+        Tab5:AddToggle({
+            Name = "Auto All Skills",
+            Default = false,
+            Callback = function(Value)
+                val = Value
+                pcall(function()
+                while val do
+                    loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                wait()
+                end
+            end)
+
+            end    
+        }) 
+
+
+
+ ---
+
+
+ -- Tab6
+         Tab6:AddDropdown({
+            Name = "Select",
+            Default = "",
+            Options = {"_ape", "_pain", "_arlongo", "_armoredTitan", "_desertBoss", "_friezy", "_gyutaro", "_handDemon", "_overhaul"} ,
+            Callback = function(Value)
+                getgenv().aBoss = Value
+
+            end
+        })
+
+        Tab6:AddSlider({
+            Name = "Farm Distance",
+            Min = 0,
+            Max = 80,
+            Default = 9,
+            Color = Color3.fromRGB(255,255,255),
+            Increment = 1,
+            ValueName = "Distance",
+            Callback = function(Value)
+                getgenv().dista2 = Value
+            end    
+        })
+
+        Tab6:AddToggle({
+            Name = "Start Auto Farm",
+            Default = false,
+            Callback = function(Value)
+             getgenv().bBoss = Value
+
+             while bBoss do task.wait()
+  
+                pcall(function()
+                  
+                    moveto(DoABoss().Head.CFrame + Vector3.new(0,0,0) ,100)
+            wait()
+        end)
+    end
+             
+
+                
+            end    
+        }) 
+
+        Tab6:AddToggle({
+            Name = "Strength Kill Aura",
+            Default = false,
+            Callback = function(Value)
+                t = Value
+                    getgenv().autoStren = t
+                    AutoStr()
+            end    
+        }) 
+
+        Tab6:AddToggle({
+            Name = "Sword Kill Aura",
+            Default = false,
+            Callback = function(Value)
+                t = Value
+                    getgenv().autoSword = t
+                    AutoSword()
+            end    
+        }) 
+        
+        Tab6:AddToggle({
+            Name = "Auto All Skills",
+            Default = false,
+            Callback = function(Value)
+                val = Value
+                pcall(function()
+                while val do
+                    loadstring(game:HttpGet("https://pastebin.com/raw/zAvxcTAi"))()
+                wait()
+                end
+            end)
+
+            end    
+        }) 
+
+
+ --
+
+ --Tab7
+        Tab7:AddLabel("Teleport Training Zones By Name")
+        Tab7:AddDropdown({
+            Name = "Select",
+            Default = "",
+            Options = TPDimension ,
+            Callback = function(Value)
+                getgenv().tpareas = Value
+            
+                TPdim()
+            end
+        })
+
+        Tab7:AddLabel("Teleport Training Zones By Amount")
+
+
+        Tab7:AddLabel("Strength Zones")
+
+        Tab7:AddButton({
+            Name = "100 Strength",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Wood Logs"].CFrame
+              end    
+        })
+
+        Tab7:AddButton({
+            Name = "10K Strength & Speed",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Gym.CFrame
+              end    
+        })
+
+        Tab7:AddButton({
+            Name = "100k Strength",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas["Garbage Beach"].CFrame
+              end    
+        })
+
+        Tab7:AddButton({
+            Name = "1M Strength",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Boulder.CFrame
+              end    
+        })
+
+        Tab7:AddButton({
+            Name = "10M Strength",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Scriptable.TrainingsAreas.Meteor.CFrame
+              end    
+        })
+
+        Tab7:AddButton({
+            Name = "100M Strength",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1544.54944, 26.1162777, -170.458191, -0.070088543, 0.0320285894, 0.997026443, 9.67930358e-09, 0.99948442, -0.0321075507, -0.997540772, -0.00225036172, -0.0700524077)        
+            end    
+        })
+
+
+        Tab7:AddButton({
+            Name = "1B Strength",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-991.67334, 150.52742, 1735.3114, 0.976564825, -0, -0.215223521, 0, 1, -0, 0.215223521, 0, 0.976564825)        
+            end    
+        })
+
+
+        Tab7:AddButton({
+            Name = "100B Strength",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1601.82031, 107.529938, 835.730103, 0.366489053, 0.20336841, -0.907924592, -1.30977558e-08, 0.975819826, 0.218576431, 0.930422366, -0.0801058635, 0.357627302)        
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "1T Strength",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3.10949707, -1160.40076, 514.621155, -0.998729467, 0, 0.0503960401, 0, 1, 0, -0.0503960401, 0, -0.998729467)        
+            end    
+        })
+
+
+
+
+        Tab7:AddButton({
+            Name = "100T Strength",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(274.173676, 162.495438, 2360.12476, -0.951660633, 0, 0.307151347, 0, 1, 0, -0.307151347, 0, -0.951660633)        
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "1Qd Strength",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1262.4613, -260.499207, 2171.62769, 0.894750595, 0, 0.446566194, 0, 1, 0, -0.446566194, 0, 0.894750595)        
+            end    
+        })
+
+
+
+        Tab7:AddLabel("Durability Zones")
+
+        Tab7:AddButton({
+            Name = "100 Durability",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(636.348816, 14.2855663, -110.65036, 0.999991834, -0.00296154735, 0.00274112658, 1.82909565e-09, 0.679268658, 0.733889699, -0.00403541047, -0.733883739, 0.679263115) 
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "10K Durability",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-182.504791, 27.3567905, 237.134308, 0.99502337, 0.0136445155, -0.0987031758, -5.6129994e-09, 0.990579963, 0.136935592, 0.0996418074, -0.136254117, 0.985650182) 
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "100k Durability",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1286.89868, 16.8384056, -313.440491, 0.843425155, 0.0434102304, 0.535490036, -3.28274985e-09, 0.996730208, -0.0808012933, -0.537246704, 0.0681498423, 0.840667367) 
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "1M Durability",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(508.700195, 18.14221, -2690.25537, -0.708435118, 0.0409433022, -0.70458734, 7.41611528e-09, 0.998315871, 0.0580117479, 0.705775976, 0.0410975553, -0.707242012)        
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "10M Durability",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1622.99512, 481.173035, 1246.76611, -0.317261904, 0.050684128, -0.946982563, -8.54601989e-09, 0.9985708, 0.05344522, 0.948337972, 0.0169561394, -0.316808462)       
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "100M Durability",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1715.50671, 1135.74451, 807.227173, -0.0326936319, -0.245683476, 0.968798637, -1.20872148e-08, 0.969316781, 0.24581489, -0.999465406, 0.00803656969, -0.0316904895)        
+            end    
+        })
+
+
+        Tab7:AddButton({
+            Name = "1B Durability",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-175.805771, 199.794495, -1777.01929, 0.769388914, 0.192928538, -0.608949363, 2.87885609e-08, 0.953299582, 0.302026302, 0.638780653, -0.232375696, 0.733458102)        
+            end    
+        })
+
+
+        Tab7:AddButton({
+            Name = "100B Durability",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1172.46387, 91.6903076, 1661.55676, 0.927174032, 0.00198839116, -0.374625593, -8.44594705e-09, 0.999985933, 0.00530758034, 0.374630868, -0.00492104748, 0.927160978)        
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "1T Durability",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1258.98474, 256.930573, -1700.40125, 0.969737649, -0, -0.244149387, 0, 1, -0, 0.244149387, 0, 0.969737649)        
+            end    
+        })
+
+
+
+
+        Tab7:AddButton({
+            Name = "100T Durability",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-413.817261, 143.700317, 2850.18726, -0.00487720966, 0, -0.999988139, 0, 1, 0, 0.999988139, 0, -0.00487720966)        
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "1Qd Durability",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-199.738586, 312.071686, 3220.68311, -0.00487720966, 0, -0.999988139, 0, 1, 0, 0.999988139, 0, -0.00487720966)        
+            end    
+        })
+
+
+        Tab7:AddLabel("Chakra Zones")
+
+        Tab7:AddButton({
+            Name = "100 Chakra",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13.4806986, 71.8272018, -94.9510269, -0.956312776, -0.0742407963, -0.282761753, 1.05616857e-08, 0.967217624, -0.253948838, 0.292345524, -0.242854521, -0.92496258) 
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "10K Chakra",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-301.089905, 19.4242992, -476.478027, 0.996728778, -0.00381719205, 0.0807288215, 8.14059042e-09, 0.998883963, 0.047231257, -0.0808190182, -0.0470767543, 0.995616436) 
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "100k Chakra",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(201.570358, 23.5646324, 282.463562, 0.857856989, -0.0194406249, 0.513520658, 7.69185515e-09, 0.999284148, 0.0378304198, -0.513888538, -0.0324530862, 0.857242882)        
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "1M Chakra",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(288.764709, 192.455887, 522.874695, -0.998793244, -0.0205315184, 0.0446156263, -9.10030451e-09, 0.908426106, 0.418045431, -0.049113106, 0.417540938, -0.907329857)       
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "15M Chakra",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1114.16406, 248.713928, -2293.72876, -0.933410108, -0.0600997135, 0.353742331, -3.83112875e-09, 0.985872626, 0.167496666, -0.358811378, 0.156343073, -0.920223475)       
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "100M Chakra",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(944.057983, 70.0314713, -3396.01709, -0.888065815, 0.156428277, -0.432283789, -1.12220611e-07, 0.940327227, 0.340271533, 0.45971632, 0.302183568, -0.835072458)        
+            end    
+        })
+
+
+        Tab7:AddButton({
+            Name = "1B Chakra",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-158.63707, 15.020134, 1617.86304, 0.933608592, -0.0698518828, 0.351419628, 8.99765062e-09, 0.980811894, 0.194956526, -0.358294636, -0.18201308, 0.915694356) 
+            end    
+        })
+
+
+        Tab7:AddButton({
+            Name = "100B Chakra",
+            Callback = function()
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1364.31311, 107.308647, 2299.36035, 0.857151747, -0, -0.515064001, 0, 1, -0, 0.515064001, 0, 0.857151747)
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "1T Chakra",
+            Callback = function()
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1949.16638, 45.0408516, -626.517334, 0.18026942, 0, 0.983617365, 0, 1, 0, -0.983617365, 0, 0.18026942)
+            end    
+        })
+
+
+
+
+        Tab7:AddButton({
+            Name = "100T Chakra",
+            Callback = function()
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-564.525391, 28.1805267, 739.559082, -0.984812617, 0, -0.173621148, 0, 1, 0, 0.173621148, 0, -0.984812617)
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "1Qd Chakra",
+            Callback = function()
+                game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10.9499273, 278.351624, 3581.52515, -0.999983072, 0, -0.00586987333, 0, 1, 0, 0.00586987333, 0, -0.999983072)
+            end    
+        })
+
+
+        Tab7:AddLabel("Speed Zones")
+
+        Tab7:AddButton({
+            Name = "100 Speed",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-22.412981, 23.7156105, -546.131042, -0.985158622, -0.00574043393, -0.171550259, 6.88349733e-09, 0.99944061, -0.0334434323, 0.171646282, -0.0329470858, -0.984607577) 
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "10K Speed",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-427.712372, 16.0440826, -313.596191, -0.091519475, 1.80569497e-08, -0.995803297, 5.72380117e-08, 1, 1.28725803e-08, 0.995803297, -5.5819708e-08, -0.091519475) 
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "100k Speed",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-479.808075, 57.3058395, 106.510178, 0.0575098917, -7.87296059e-08, -0.998344958, 5.04539628e-08, 1, -7.59537144e-08, 0.998344958, -4.60023699e-08, 0.0575098917) 
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "1M Speed",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1153.63513, 111.767349, 2372.35181, -0.741994083, -1.37903884e-08, 0.670406461, 7.3158847e-11, 1, 2.06511626e-08, -0.670406461, 1.53720858e-08, -0.741994083)       
+            end    
+        })
+
+        Tab7:AddButton({
+            Name = "100M Speed",
+            Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(722.618469, 104.359314, 2626.40039, -0.00487720966, 0, -0.999988139, 0, 1, 0, 0.999988139, 0, -0.00487720966)
+            end    
+        })
+
+
+
+
+
+ --
+
+
+
+ -- Tab8 
+ Tab8:AddLabel("Teleport NPCS")
+
+ Tab8:AddLabel("Teleport NPCS Quests")
+
+ Tab8:AddDropdown({
+     Name = "Select Quest NPCS",
+     Default = "",
+     Options = QuestNPCS ,
+     Callback = function(Value)
+         getgenv().npcsquest = Value
+     
+         NPCSQuestss()
+     end
+ })
+ --
+
+ --- Tab9 
+
+             Tab9:AddLabel("Teleport Shops")
+
+                
+                Tab9:AddButton({
+                    Name = "Champions Pods",
+                    Callback = function()
+                        game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(137.066986, 79.6105728, -255.669998, 0.561789215, -9.95049092e-08, -0.827280402, 3.57348036e-08, 1, -9.60127622e-08, 0.827280402, 2.43762344e-08, 0.561789215)
+                    end    
+                })
+        
+                Tab9:AddButton({
+                    Name = "Stands",
+                    Callback = function()
+                        game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-288.255615, 14.709693, -41.1757927, 0.0798003227, 8.67170797e-08, 0.996810853, -3.98024191e-09, 1, -8.66758754e-08, -0.996810853, 2.94921487e-09, 0.0798003227)
+                    end    
+                })
+        
+                Tab9:AddButton({
+                    Name = "Quirks",
+                    Callback = function()
+                        game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-768.809448, 67.1714325, 1527.82593, 0.516141891, 6.11732398e-09, 0.856503069, 2.1963551e-09, 1, -8.46576587e-09, -0.856503069, 6.25072172e-09, 0.516141891)
+                    end    
+                })
+        
+                Tab9:AddButton({
+                    Name = "Breathing Styles",
+                    Callback = function()
+                        game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7.66497564, 250.580872, 3738.45117, -0.997404635, -3.03105203e-08, 0.0719995648, -3.39798554e-08, 1, -4.97384463e-08, -0.0719995648, -5.2055892e-08, -0.997404635)
+                    end    
+                })
+        
+        
+        
+
+ --
+
+ -- Tab10 
+                    Tab10:AddLabel("Misc")
+                    Tab10:AddLabel("credits: ebadgameryt")
+
+                    Tab10:AddLabel("Join Discord Server for More Updates!")
+                    Tab10:AddLabel("Discord Server Link: https://discord.gg/NJ3u2pVjcs")
+
+                    Tab10:AddLabel("Scroll Down For Discord Server")
+
+
+
+                    Tab10:AddToggle({
+                        Name = "NoClip",
+                        Default = false,
+                        Callback = function(Value)
+                            benoclip = Value
+                            local Workspace = game:GetService("Workspace")
+                            local Players = game:GetService("Players")
+                            local Plr = Players.LocalPlayer
+                            local Clipon = false
+
+
+                            if benoclip == true then
+                                Clipon = true
+                                
+                                Stepped = game:GetService("RunService").Stepped:Connect(function()
+                                    if not Clipon == false then
+                                        for a, b in pairs(Workspace:GetChildren()) do
+                                        if b.Name == Plr.Name then
+                                        for i, v in pairs(Workspace[Plr.Name]:GetChildren()) do
+                                        if v:IsA("BasePart") then
+                                        v.CanCollide = false
+                                        end end end end
+                                    else
+                                        Stepped:Disconnect()
+                                    end
+                                end)
+                            elseif benoclip == false then
+                                Clipon = false
+                            
+                            end
+                        end    
+                    })
+
+                        Tab10:AddButton({
+                            Name = "ANTI AFK (rejoin to disable)",
+                            Callback = function()
+
+                                for _, v in next, getconnections(game:GetService("Players").LocalPlayer.Idled) do
+                                    v:Disable()
+                                end 
+                                    OrionLib:MakeNotification({
+                                        Name = "ANTI AFK HAS BEEN ENABLED",
+                                        Content = "if you want to disable rejoin :)",
+                                        Image = "rbxassetid://4483345998",
+                                        Time = 5
+                                    })
+                                    
+                                   
+                            end 
+                    })
+            
+
+
+
+                    Tab10:AddSlider({
+                        Name = "Walk Speed",
+                        Min = 0,
+                        Max = 500,
+                        Default = 25,
+                        Color = Color3.fromRGB(255,255,255),
+                        Increment = 1,
+                        ValueName = "Speed",
+                        Callback = function(Value)
+                            getgenv().bool = Value            
+
+                        end    
+                    })
+
+                    Tab10:AddToggle({
+                        Name = "Walk Speed On/Off",
+                        Default = false,
+                        Callback = function(Value)
+                            g = Value
+
+                            while g do task.wait()
+                                game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = bool
+                            end
+
+                        end    
+                    })
+
+                    Tab10:AddSlider({
+                        Name = "Jump Power",
+                        Min = 0,
+                        Max = 500,
+                        Default = 25,
+                        Color = Color3.fromRGB(255,255,255),
+                        Increment = 1,
+                        ValueName = "Speed",
+                        Callback = function(Value)
+                            getgenv().bool2 = Value            
+
+                        end    
+                    })
+
+                    Tab10:AddToggle({
+                        Name = "Jump Power On/Off",
+                        Default = false,
+                        Callback = function(Value)
+                            g = Value
+
+                            while g do task.wait()
+                                game.Players.LocalPlayer.Character.Humanoid.JumpPower = bool2
+                            end
+
+                        end    
+                    })
+
+                    Tab10:AddButton({
+                        Name = "Discord Server",
+                        Callback = function()
+                            setclipboard("https://discord.gg/NJ3u2pVjcs")
+                            toclipboard("https://discord.gg/NJ3u2pVjcs")
+
+                                OrionLib:MakeNotification({
+                                    Name = "Link Copied!",
+                                    Content = "Paste it in Browser",
+                                    Image = "rbxassetid://4483345998",
+                                    Time = 5
+                                })
+                                
+                               
+                        end 
+                })
+
+                Tab10:AddToggle({
+                    Name = "Inf Stamina",
+                    Default = false,
+                    Callback = function(Value)
+                        v = Value
+                    local stamina = game:GetService("ReplicatedStorage").Events["Stamina/RemoteEvent"]
+
+                    if v then  
+
+                        stamina:Destroy()
+                        wait()
+                        
+                    end
+                end    
+                })
+ --
+
+
+OrionLib:Init()
