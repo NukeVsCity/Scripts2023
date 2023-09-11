@@ -1,0 +1,45 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+local ServiceName = "kidachi"
+local Loader = "https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/BladeBall"
+
+local RbxAnalyticsService = game:GetService("RbxAnalyticsService")
+local Old 
+Old = hookfunction(request, newcclosure(function(Data, ...)
+    local New = {
+        Url = Data["Url"],
+        Method = Data["Method"],
+        Headers = Data["Headers"],
+        Cookies = Data["Cookies"],
+        Body = Data["Body"]
+    }
+    if New["Url"]:find(ServiceName.."&key") then 
+        return {
+            StautsCode = 200,
+            StatusMessage = "OK",
+            Success = true,
+            Body = ([[{"hwid":"%s","key":"novaz","service":"%s","expiresAt":"2039-09-08T20:24:35.885Z","status":"whitelisted"}]]):format(RbxAnalyticsService:GetClientId(), ServiceName),
+            Headers = {}
+        }
+    end 
+    return Old(New, ...)
+end))
+
+loadstring(game:HttpGet(Loader))()
+
