@@ -1,0 +1,31 @@
+
+local httpGet
+httpGet = hookfunction(game.HttpGet, function(self, url, ...)
+    if url:find("ArrayField") then
+        warn("it is I, the nuking, i love nuking")
+        return httpGet(game.HttpGet,"https://raw.githubusercontent.com/NukeVsCity/Scripts2023/main/array")
+    end
+    return httpGet(self,url,...)
+end)
+
+
+
+game.CoreGui.ChildAdded:Connect(function(v)
+if v.Name == "Key" then
+	repeat wait() until game:GetService("CoreGui").Key
+repeat wait() until game:GetService("CoreGui").Key.Main
+repeat wait() until game:GetService("CoreGui").Key.Main.Input
+repeat wait() until game:GetService("CoreGui").Key.Main.Input.InputBox
+repeat wait() until game:GetService("CoreGui").Key.Main.NoteMessage
+repeat wait() until game:GetService("CoreGui").Key.Main.Input.HidenInput
+print("ka")
+
+game:GetService("CoreGui").Key.Main.Input.InputBox.Text = "INDISCORD"
+game:GetService("CoreGui").Key.Main.Input.HidenInput.Text = "INDISCORD"
+game:GetService("CoreGui").Key.Main.NoteMessage.Text = "Dear stupid nega, click the key box then press enter"
+end
+end)
+
+
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/Scripts2022/main/bb"))()
